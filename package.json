@@ -1,0 +1,23 @@
+{
+  "name": "frontend-project-lvl1",
+  "version": "1.0.0",
+  "description": "hexlet first project on frontend profession",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vre2h/frontend-project-lvl1.git"
+  },
+  "keywords": [
+    "hexlet",
+    "frontend"
+  ],
+  "author": "Oganisyan Vrezh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vre2h/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/vre2h/frontend-project-lvl1#readme"
+}
