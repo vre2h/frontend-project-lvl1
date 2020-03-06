@@ -1,15 +1,7 @@
-import readlineSync from 'readline-sync';
+import { WinningScore, Answers } from '../constants';
 
-const Answers = {
-  yes: 'yes',
-  no: 'no',
-};
-
-const WinningScore = 3;
-
-const isEven = (num) => num % 2 === 0;
-
-const ask = (qstn) => readlineSync.question(qstn);
+import ask from '../helpers/askQstn';
+import isEven from '../helpers/isEven';
 
 const brainEven = () => {
   console.log('Welcome to the Brain Games! \n');
