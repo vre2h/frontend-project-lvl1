@@ -14,7 +14,7 @@ export default (operand1, operand2, operation) => {
     case '/':
       return operand1 / operand2;
     case '*':
-      return operand1 / operand2;
+      return operand1 * operand2;
     default:
       throw new Error(
         `Provide operation for the given numbers: ${operand1} and ${operand2}`,
