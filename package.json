@@ -1,6 +1,6 @@
 {
   "name": "frontend-project-lvl1",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "hexlet first project on frontend profession",
   "main": "src/index.js",
   "type": "module",
