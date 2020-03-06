@@ -4,14 +4,14 @@ import ask from '../helpers/askQstn.js';
 import isEven from '../helpers/isEven.js';
 
 /**
- * @typedef {Object} GameResponse
+ * @typedef {Object} BrainEvenResponse
  * @property {string} GameResponse.actual - actual answer
  * @property {string} GameResponse.expected - expected answer
  */
 
 /**
  * Checking whether the given number is Event
- * @returns {GameResponse}
+ * @returns {BrainEvenResponse}
  *
  */
 const brainEven = () => {
