@@ -7,6 +7,12 @@ _I've created this project during [Hexlet's](https://hexlet.io) course_
 
 ## Game 1: Brain even
 
-How to install and play a game:
+How to install and play the game:
 
 [![asciicast](https://asciinema.org/a/kCcCit0sJWynXqR5Z0wjubNIJ.svg)](https://asciinema.org/a/kCcCit0sJWynXqR5Z0wjubNIJ)
+
+## Game 2: Brain calc
+
+How to install and play the game:
+
+[![asciicast](https://asciinema.org/a/NqJ4fKek8XZM1ObJaEKaDYckj.svg)](https://asciinema.org/a/NqJ4fKek8XZM1ObJaEKaDYckj)
