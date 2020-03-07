@@ -1,5 +1,6 @@
 import ask from '../helpers/askQstn.js';
 import calcByOperation from '../helpers/calcByOperation.js';
+import { getRandomBefore } from '../helpers/randomizer.js';
 
 const Operations = ['+', '-', '/', '*'];
 
@@ -15,9 +16,9 @@ const Operations = ['+', '-', '/', '*'];
  *
  */
 const brainCalc = () => {
-  const randomNumber1 = Math.floor(Math.random() * 100);
-  const randomNumber2 = Math.floor(Math.random() * 100);
-  const randomOperation = Operations[Math.floor(Math.random() * 4)];
+  const randomNumber1 = getRandomBefore(100);
+  const randomNumber2 = getRandomBefore(100);
+  const randomOperation = Operations[getRandomBefore(Operations.length)];
   const expected = calcByOperation(
     randomNumber1,
     randomNumber2,

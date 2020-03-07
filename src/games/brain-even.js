@@ -2,6 +2,7 @@ import { Answers } from '../constants.js';
 
 import ask from '../helpers/askQstn.js';
 import isEven from '../helpers/isEven.js';
+import { getRandomBefore } from '../helpers/randomizer.js';
 
 /**
  * @typedef {Object} BrainEvenResponse
@@ -15,7 +16,7 @@ import isEven from '../helpers/isEven.js';
  *
  */
 const brainEven = () => {
-  const randomNumber = Math.floor(Math.random() * 100);
+  const randomNumber = getRandomBefore(100);
   const actualParity = isEven(randomNumber) ? Answers.yes : Answers.no;
 
   console.log(`Question: ${randomNumber}`);

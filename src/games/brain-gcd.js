@@ -1,5 +1,6 @@
 import ask from '../helpers/askQstn.js';
 import gcd from '../helpers/gcd.js';
+import { getRandomBefore } from '../helpers/randomizer.js';
 
 /**
  * @typedef {Object} BrainGCDResponse
@@ -13,8 +14,8 @@ import gcd from '../helpers/gcd.js';
  *
  */
 const brainGcd = () => {
-  const randomNumber1 = Math.floor(Math.random() * 100);
-  const randomNumber2 = Math.floor(Math.random() * 100);
+  const randomNumber1 = getRandomBefore(100);
+  const randomNumber2 = getRandomBefore(100);
   const expected = gcd(randomNumber1, randomNumber2);
 
   console.log(`Question: ${randomNumber1} ${randomNumber2}`);

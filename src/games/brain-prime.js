@@ -2,6 +2,7 @@ import { Answers } from '../constants.js';
 
 import ask from '../helpers/askQstn.js';
 import isPrime from '../helpers/isPrime.js';
+import { getRandomBefore } from '../helpers/randomizer.js';
 
 /**
  * @typedef {Object} BrainPrimeResponse
@@ -15,7 +16,7 @@ import isPrime from '../helpers/isPrime.js';
  *
  */
 const brainPrime = () => {
-  const randomNumber = Math.floor(Math.random() * 100);
+  const randomNumber = getRandomBefore(100);
   const actualParity = isPrime(randomNumber) ? Answers.yes : Answers.no;
 
   console.log(`Question: ${randomNumber}`);
