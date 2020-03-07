@@ -1,5 +1,6 @@
 import ask from '../helpers/askQstn.js';
 import { getRandomBefore, getRandomSegment } from '../helpers/randomizer.js';
+import getProgression from '../helpers/getProgression.js';
 
 /**
  * @typedef {Object} BrainProgressionResponse
@@ -15,20 +16,15 @@ import { getRandomBefore, getRandomSegment } from '../helpers/randomizer.js';
 const brainProgression = () => {
   const startNumber = getRandomBefore(100);
   const diff = getRandomSegment(1, 10);
-  const count = getRandomSegment(8, 10);
-  const numberOfSkippedElem = getRandomBefore(count);
+  const size = getRandomSegment(8, 10);
+  const numberOfSkippedElem = getRandomBefore(size);
 
-  let expected = 0;
-  let progression = '';
-
-  for (let num = startNumber, i = 0; i < count; num += diff, i += 1) {
-    if (i === numberOfSkippedElem) {
-      expected = num;
-      progression = `${progression} .. `;
-    } else {
-      progression = `${progression} ${num} `;
-    }
-  }
+  const { expected, progression } = getProgression({
+    startNumber,
+    diff,
+    numberOfSkippedElem,
+    size,
+  });
 
   console.log(`Question: ${progression}`);
 
