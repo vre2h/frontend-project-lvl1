@@ -29,10 +29,18 @@ How to install and play the game:
 
 [![asciicast](https://asciinema.org/a/fAqh8j0WdsuCEqqi6KQA2ppLY.svg)](https://asciinema.org/a/fAqh8j0WdsuCEqqi6KQA2ppLY)
 
-## Game 2: Brain progression
+## Game 3: Brain progression
 
 _Find skipped elem in progression._
 
 How to install and play the game:
 
 [![asciicast](https://asciinema.org/a/MfwXrh3rz4asMaMcYD90rScTd.svg)](https://asciinema.org/a/MfwXrh3rz4asMaMcYD90rScTd)
+
+## Game 4: Brain prime
+
+_Guess if the number is prime._
+
+How to install and play the game:
+
+https://asciinema.org/a/GSU0ZvZjpwGY2FSIxNOW37J51
