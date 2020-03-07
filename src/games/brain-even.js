@@ -18,7 +18,7 @@ const brainEven = () => {
   const randomNumber = Math.floor(Math.random() * 100);
   const actualParity = isEven(randomNumber) ? Answers.yes : Answers.no;
 
-  console.log(`\nQuestion: ${randomNumber}`);
+  console.log(`Question: ${randomNumber}`);
 
   const answer = ask('Your answer: ');
 

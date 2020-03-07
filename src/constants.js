@@ -5,4 +5,10 @@ const Answers = {
   no: 'no',
 };
 
-export { WinningScore, Answers };
+const Greetings = {
+  brainGcd: 'Find the greatest common divisor of given numbers.',
+  brainCalc: 'What is the result of the expression?',
+  brainEven: 'Answer "yes" if the number is even, otherwise answer "no".',
+};
+
+export { WinningScore, Answers, Greetings };

@@ -1,4 +1,4 @@
-import { WinningScore } from './constants.js';
+import { WinningScore, Greetings } from './constants.js';
 import ask from './helpers/askQstn.js';
 import brainEven from './games/brain-even.js';
 
@@ -7,7 +7,9 @@ const app = (launchGame = brainEven) => {
 
   const name = ask('May I have your name? ');
 
-  console.log(`Hello, ${name}!`);
+  console.log(`Hello, ${name}!\n`);
+
+  console.log(`${Greetings[launchGame.name]}\n`);
 
   let score = 0;
 

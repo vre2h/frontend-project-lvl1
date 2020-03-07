@@ -12,16 +12,16 @@ import gcd from '../helpers/gcd.js';
  * @returns {BrainGCDResponse}
  *
  */
-const brainEven = () => {
+const brainGcd = () => {
   const randomNumber1 = Math.floor(Math.random() * 100);
   const randomNumber2 = Math.floor(Math.random() * 100);
   const expected = gcd(randomNumber1, randomNumber2);
 
-  console.log(`\nQuestion: ${randomNumber1} ${randomNumber2}`);
+  console.log(`Question: ${randomNumber1} ${randomNumber2}`);
 
   const actual = Number(ask('Your answer: '));
 
   return { actual, expected };
 };
 
-export default brainEven;
+export default brainGcd;

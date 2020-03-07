@@ -24,9 +24,7 @@ const brainCalc = () => {
     randomOperation,
   );
 
-  console.log(
-    `\nQuestion: ${randomNumber1} ${randomOperation} ${randomNumber2}`,
-  );
+  console.log(`Question: ${randomNumber1} ${randomOperation} ${randomNumber2}`);
   const actual = Number(ask('Your answer: '));
 
   return { actual, expected };
