@@ -7,12 +7,24 @@ _I've created this project during [Hexlet's](https://hexlet.io) course_
 
 ## Game 1: Brain even
 
+_Guess given numbers parity._
+
 How to install and play the game:
 
 [![asciicast](https://asciinema.org/a/kCcCit0sJWynXqR5Z0wjubNIJ.svg)](https://asciinema.org/a/kCcCit0sJWynXqR5Z0wjubNIJ)
 
 ## Game 2: Brain calc
 
+_Calc two numbers._
+
 How to install and play the game:
 
 [![asciicast](https://asciinema.org/a/NqJ4fKek8XZM1ObJaEKaDYckj.svg)](https://asciinema.org/a/NqJ4fKek8XZM1ObJaEKaDYckj)
+
+## Game 2: Brain gcd
+
+_Find greatest common divisor._
+
+How to install and play the game:
+
+[![asciicast](https://asciinema.org/a/fAqh8j0WdsuCEqqi6KQA2ppLY.svg)](https://asciinema.org/a/fAqh8j0WdsuCEqqi6KQA2ppLY)
