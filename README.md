@@ -28,3 +28,11 @@ _Find greatest common divisor._
 How to install and play the game:
 
 [![asciicast](https://asciinema.org/a/fAqh8j0WdsuCEqqi6KQA2ppLY.svg)](https://asciinema.org/a/fAqh8j0WdsuCEqqi6KQA2ppLY)
+
+## Game 2: Brain progression
+
+_Find skipped elem in progression._
+
+How to install and play the game:
+
+[![asciicast](https://asciinema.org/a/MfwXrh3rz4asMaMcYD90rScTd.svg)](https://asciinema.org/a/MfwXrh3rz4asMaMcYD90rScTd)
