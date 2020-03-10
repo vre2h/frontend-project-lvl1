@@ -1,6 +1,25 @@
-import ask from '../helpers/askQstn.js';
-import { getRandomBefore, getRandomSegment } from '../helpers/randomizer.js';
-import getProgression from '../helpers/getProgression.js';
+import readlineSync from 'readline-sync';
+
+import { getRandomBefore, getRandomSegment } from '../utils.js';
+
+// prettier-ignore
+const getProgression = ({
+  startNumber, size, diff, numberOfSkippedElem,
+}) => {
+  let expected = 0;
+  let progression = '';
+
+  for (let num = startNumber, i = 0; i < size; num += diff, i += 1) {
+    if (i === numberOfSkippedElem) {
+      expected = num;
+      progression = `${progression} .. `;
+    } else {
+      progression = `${progression} ${num} `;
+    }
+  }
+
+  return { expected, progression };
+};
 
 /**
  * @typedef {Object} BrainProgressionResponse
@@ -28,7 +47,7 @@ const brainProgression = () => {
 
   console.log(`Question: ${progression}`);
 
-  const actual = Number(ask('Your answer: '));
+  const actual = Number(readlineSync('Your answer: '));
 
   return { actual, expected };
 };

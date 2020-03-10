@@ -1,11 +1,17 @@
-import ask from '../helpers/askQstn.js';
-import isEven from '../helpers/isEven.js';
-import { getRandomBefore } from '../helpers/randomizer.js';
+import readlineSync from 'readline-sync';
+
+import { getRandomBefore } from '../utils.js';
 
 const Answers = {
   yes: 'yes',
   no: 'no',
 };
+
+/**
+ * @param {number} num - number that need to be checked
+ * @returns {boolean} - is given number even
+ */
+const isEven = (num) => num % 2 === 0;
 
 /**
  * @typedef {Object} BrainEvenResponse
@@ -24,7 +30,7 @@ const brainEven = () => {
 
   console.log(`Question: ${randomNumber}`);
 
-  const answer = ask('Your answer: ');
+  const answer = readlineSync('Your answer: ');
 
   return { actual: answer, expected: actualParity };
 };

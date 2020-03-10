@@ -1,5 +1,6 @@
+import readlineSync from 'readline-sync';
+
 import { Greetings } from './constants.js';
-import ask from './helpers/askQstn.js';
 import brainEven from './games/brain-even.js';
 
 const WinningScore = 3;
@@ -7,7 +8,7 @@ const WinningScore = 3;
 const app = (launchGame = brainEven) => {
   console.log('Welcome to the Brain Games! \n');
 
-  const name = ask('May I have your name? ');
+  const name = readlineSync('May I have your name? ');
 
   console.log(`Hello, ${name}!\n`);
 

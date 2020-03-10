@@ -1,10 +1,25 @@
-import ask from '../helpers/askQstn.js';
-import isPrime from '../helpers/isPrime.js';
-import { getRandomBefore } from '../helpers/randomizer.js';
+import readlineSync from 'readline-sync';
+
+import { getRandomBefore } from '../utils.js';
 
 const Answers = {
   yes: 'yes',
   no: 'no',
+};
+
+/**
+ * Check if the number is prime
+ * @param {number} num - given number
+ * @returns {boolean} whether given number prime or not
+ */
+const isPrime = (num) => {
+  for (let i = 2; i <= num / 2; i += 1) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+
+  return true;
 };
 
 /**
@@ -24,7 +39,7 @@ const brainPrime = () => {
 
   console.log(`Question: ${randomNumber}`);
 
-  const answer = ask('Your answer: ');
+  const answer = readlineSync('Your answer: ');
 
   return { actual: answer, expected: actualParity };
 };

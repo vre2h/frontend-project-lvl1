@@ -1,8 +1,32 @@
-import ask from '../helpers/askQstn.js';
-import calcByOperation from '../helpers/calcByOperation.js';
-import { getRandomBefore } from '../helpers/randomizer.js';
+import readlineSync from 'readline-sync';
+
+import { getRandomBefore } from '../utils.js';
 
 const Operations = ['+', '-', '/', '*'];
+
+/**
+ *
+ * @param {number} operand1
+ * @param {number} operand2
+ * @param {string} operation
+ * @returns {number} given operation calculated by the operands
+ */
+const calcByOperation = (operand1, operand2, operation) => {
+  switch (operation) {
+    case '+':
+      return operand1 + operand2;
+    case '-':
+      return operand1 - operand2;
+    case '/':
+      return operand1 / operand2;
+    case '*':
+      return operand1 * operand2;
+    default:
+      throw new Error(
+        `Provide operation for the given numbers: ${operand1} and ${operand2}`,
+      );
+  }
+};
 
 /**
  * @typedef {Object} BrainCalcResponse
@@ -26,7 +50,7 @@ const brainCalc = () => {
   );
 
   console.log(`Question: ${randomNumber1} ${randomOperation} ${randomNumber2}`);
-  const actual = Number(ask('Your answer: '));
+  const actual = Number(readlineSync('Your answer: '));
 
   return { actual, expected };
 };

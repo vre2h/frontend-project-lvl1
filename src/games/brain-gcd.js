@@ -1,6 +1,24 @@
-import ask from '../helpers/askQstn.js';
-import gcd from '../helpers/gcd.js';
-import { getRandomBefore } from '../helpers/randomizer.js';
+import readlineSync from 'readline-sync';
+
+import { getRandomBefore } from '../utils.js';
+
+/**
+ * Returns the gcd of two numbers
+ * @param {number} num1
+ * @param {number} num2
+ * @returns {number} gcd of two numbers
+ */
+const gcd = (num1, num2) => {
+  if (num1 === num2) {
+    return num1;
+  }
+
+  if (num1 > num2) {
+    return gcd(num1 - num2, num2);
+  }
+
+  return gcd(num1, num2 - num1);
+};
 
 /**
  * @typedef {Object} BrainGCDResponse
@@ -20,7 +38,7 @@ const brainGcd = () => {
 
   console.log(`Question: ${randomNumber1} ${randomNumber2}`);
 
-  const actual = Number(ask('Your answer: '));
+  const actual = Number(readlineSync('Your answer: '));
 
   return { actual, expected };
 };
