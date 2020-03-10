@@ -3,7 +3,7 @@
 _I've created this project during [Hexlet's](https://hexlet.io) course_
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/3cadfb9b017e012a820c/maintainability)](https://codeclimate.com/github/vre2h/frontend-project-lvl1/maintainability)
-![CI](https://github.com/vre2h/frontend-project-lvl1/workflows/CI/badge.svg)
+[![CI](https://github.com/vre2h/frontend-project-lvl1/workflows/CI/badge.svg)](https://github.com/vre2h/frontend-project-lvl1/actions)
 
 ## Game 1: Brain even
 
@@ -43,4 +43,4 @@ _Guess if the number is prime._
 
 How to install and play the game:
 
-https://asciinema.org/a/GSU0ZvZjpwGY2FSIxNOW37J51
+[![asciicast](https://asciinema.org/a/GSU0ZvZjpwGY2FSIxNOW37J51.svg)](https://asciinema.org/a/GSU0ZvZjpwGY2FSIxNOW37J51)
