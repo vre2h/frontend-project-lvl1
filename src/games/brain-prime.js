@@ -1,8 +1,11 @@
-import { Answers } from '../constants.js';
-
 import ask from '../helpers/askQstn.js';
 import isPrime from '../helpers/isPrime.js';
 import { getRandomBefore } from '../helpers/randomizer.js';
+
+const Answers = {
+  yes: 'yes',
+  no: 'no',
+};
 
 /**
  * @typedef {Object} BrainPrimeResponse

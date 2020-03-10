@@ -1,6 +1,8 @@
-import { WinningScore, Greetings } from './constants.js';
+import { Greetings } from './constants.js';
 import ask from './helpers/askQstn.js';
 import brainEven from './games/brain-even.js';
+
+const WinningScore = 3;
 
 const app = (launchGame = brainEven) => {
   console.log('Welcome to the Brain Games! \n');

@@ -1,8 +1,11 @@
-import { Answers } from '../constants.js';
-
 import ask from '../helpers/askQstn.js';
 import isEven from '../helpers/isEven.js';
 import { getRandomBefore } from '../helpers/randomizer.js';
+
+const Answers = {
+  yes: 'yes',
+  no: 'no',
+};
 
 /**
  * @typedef {Object} BrainEvenResponse
