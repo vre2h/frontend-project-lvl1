@@ -1,6 +1,6 @@
-import readlineSync from 'readline-sync';
-
 import { getRandomBefore } from '../utils.js';
+
+const Greeting = 'Find the greatest common divisor of given numbers.';
 
 /**
  * Returns the gcd of two numbers
@@ -34,13 +34,11 @@ const gcd = (num1, num2) => {
 const brainGcd = () => {
   const randomNumber1 = getRandomBefore(100);
   const randomNumber2 = getRandomBefore(100);
-  const expected = gcd(randomNumber1, randomNumber2);
+  const expected = String(gcd(randomNumber1, randomNumber2));
 
-  console.log(`Question: ${randomNumber1} ${randomNumber2}`);
-
-  const actual = Number(readlineSync('Your answer: '));
-
-  return { actual, expected };
+  return { expected, question: `${randomNumber1} ${randomNumber2}` };
 };
+
+brainGcd.Greeting = Greeting;
 
 export default brainGcd;

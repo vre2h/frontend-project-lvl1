@@ -1,11 +1,12 @@
-import readlineSync from 'readline-sync';
-
 import { getRandomBefore } from '../utils.js';
 
 const Answers = {
   yes: 'yes',
   no: 'no',
 };
+
+// prettier-ignore
+const Greeting = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 /**
  * @param {number} num - number that need to be checked
@@ -28,11 +29,9 @@ const brainEven = () => {
   const randomNumber = getRandomBefore(100);
   const actualParity = isEven(randomNumber) ? Answers.yes : Answers.no;
 
-  console.log(`Question: ${randomNumber}`);
-
-  const answer = readlineSync('Your answer: ');
-
-  return { actual: answer, expected: actualParity };
+  return { expected: actualParity, question: randomNumber };
 };
+
+brainEven.Greeting = Greeting;
 
 export default brainEven;

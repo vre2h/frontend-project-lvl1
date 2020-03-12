@@ -1,6 +1,5 @@
 import readlineSync from 'readline-sync';
 
-import { Greetings } from './constants.js';
 import brainEven from './games/brain-even.js';
 
 const WinningScore = 3;
@@ -8,16 +7,18 @@ const WinningScore = 3;
 const app = (launchGame = brainEven) => {
   console.log('Welcome to the Brain Games! \n');
 
-  const name = readlineSync('May I have your name? ');
+  const name = readlineSync.question('May I have your name? ');
 
   console.log(`Hello, ${name}!\n`);
 
-  console.log(`${Greetings[launchGame.name]}\n`);
+  console.log(`${launchGame.Greeting}\n`);
 
   let score = 0;
 
   while (score !== WinningScore) {
-    const { expected, actual } = launchGame();
+    const { question, expected } = launchGame();
+
+    const actual = readlineSync.question(`Question: ${question} \n`);
 
     if (expected === actual) {
       score += 1;

@@ -1,8 +1,8 @@
-import readlineSync from 'readline-sync';
-
 import { getRandomBefore } from '../utils.js';
 
 const Operations = ['+', '-', '/', '*'];
+
+const Greeting = 'What is the result of the expression?';
 
 /**
  *
@@ -43,16 +43,16 @@ const brainCalc = () => {
   const randomNumber1 = getRandomBefore(100);
   const randomNumber2 = getRandomBefore(100);
   const randomOperation = Operations[getRandomBefore(Operations.length)];
-  const expected = calcByOperation(
-    randomNumber1,
-    randomNumber2,
-    randomOperation,
+  const expected = String(
+    calcByOperation(randomNumber1, randomNumber2, randomOperation),
   );
 
-  console.log(`Question: ${randomNumber1} ${randomOperation} ${randomNumber2}`);
-  const actual = Number(readlineSync('Your answer: '));
-
-  return { actual, expected };
+  return {
+    expected,
+    question: ` ${randomNumber1} ${randomOperation} ${randomNumber2}`,
+  };
 };
+
+brainCalc.Greeting = Greeting;
 
 export default brainCalc;

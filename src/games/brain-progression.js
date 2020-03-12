@@ -1,6 +1,6 @@
-import readlineSync from 'readline-sync';
-
 import { getRandomBefore, getRandomSegment } from '../utils.js';
+
+const Greeting = 'What number is missing in the progression?';
 
 // prettier-ignore
 const getProgression = ({
@@ -45,11 +45,9 @@ const brainProgression = () => {
     size,
   });
 
-  console.log(`Question: ${progression}`);
-
-  const actual = Number(readlineSync('Your answer: '));
-
-  return { actual, expected };
+  return { expected: String(expected), question: progression };
 };
+
+brainProgression.Greeting = Greeting;
 
 export default brainProgression;
