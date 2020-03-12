@@ -1,4 +1,5 @@
 import { getRandomBefore } from '../utils.js';
+import app from '../index.js';
 
 const Operations = ['+', '-', '/', '*'];
 
@@ -53,6 +54,6 @@ const brainCalc = () => {
   };
 };
 
-brainCalc.Greeting = Greeting;
+const exec = () => app(brainCalc, Greeting);
 
-export default brainCalc;
+export { brainCalc as default, exec };

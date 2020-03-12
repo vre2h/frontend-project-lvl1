@@ -1,6 +1,7 @@
 // import readlineSync from 'readline-sync';
 
 import { getRandomBefore } from '../utils.js';
+import app from '../index.js';
 
 const Answers = {
   yes: 'yes',
@@ -43,6 +44,6 @@ const brainPrime = () => {
   return { expected: actualParity, question: randomNumber };
 };
 
-brainPrime.Greeting = Greeting;
+const exec = () => app(brainPrime, Greeting);
 
-export default brainPrime;
+export { brainPrime as default, exec };

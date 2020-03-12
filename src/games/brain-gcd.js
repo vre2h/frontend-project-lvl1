@@ -1,4 +1,5 @@
 import { getRandomBefore } from '../utils.js';
+import app from '../index.js';
 
 const Greeting = 'Find the greatest common divisor of given numbers.';
 
@@ -39,6 +40,6 @@ const brainGcd = () => {
   return { expected, question: `${randomNumber1} ${randomNumber2}` };
 };
 
-brainGcd.Greeting = Greeting;
+const exec = () => app(brainGcd, Greeting);
 
-export default brainGcd;
+export { brainGcd as default, exec };

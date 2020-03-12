@@ -1,5 +1,7 @@
 import { getRandomBefore } from '../utils.js';
 
+import app from '../index.js';
+
 const Answers = {
   yes: 'yes',
   no: 'no',
@@ -32,6 +34,6 @@ const brainEven = () => {
   return { expected: actualParity, question: randomNumber };
 };
 
-brainEven.Greeting = Greeting;
+const exec = () => app(brainEven, Greeting);
 
-export default brainEven;
+export { brainEven as default, exec };

@@ -1,4 +1,5 @@
 import { getRandomBefore, getRandomSegment } from '../utils.js';
+import app from '../index.js';
 
 const Greeting = 'What number is missing in the progression?';
 
@@ -48,6 +49,6 @@ const brainProgression = () => {
   return { expected: String(expected), question: progression };
 };
 
-brainProgression.Greeting = Greeting;
+const exec = () => app(brainProgression, Greeting);
 
-export default brainProgression;
+export { brainProgression as default, exec };

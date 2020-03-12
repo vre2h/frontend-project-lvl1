@@ -1,22 +1,24 @@
 import readlineSync from 'readline-sync';
 
-import brainEven from './games/brain-even.js';
-
 const WinningScore = 3;
 
-const app = (launchGame = brainEven) => {
+const app = (game, Greeting) => {
+  if (!game) {
+    throw new Error('Please provide a game!');
+  }
+
   console.log('Welcome to the Brain Games! \n');
 
   const name = readlineSync.question('May I have your name? ');
 
   console.log(`Hello, ${name}!\n`);
 
-  console.log(`${launchGame.Greeting}\n`);
+  console.log(`${Greeting}\n`);
 
   let score = 0;
 
   while (score !== WinningScore) {
-    const { question, expected } = launchGame();
+    const { question, expected } = game();
 
     const actual = readlineSync.question(`Question: ${question} \n`);
 
