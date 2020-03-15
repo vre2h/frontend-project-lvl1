@@ -1,7 +1,7 @@
 import getRandomNumber from '../utils.js';
 import app from '../index.js';
 
-const Greeting = 'Find the greatest common divisor of given numbers.';
+const gameDefinition = 'Find the greatest common divisor of given numbers.';
 
 /**
  * Returns the gcd of two numbers
@@ -40,6 +40,6 @@ const brainGcd = () => {
   return { expected, question: `${randomNumber1} ${randomNumber2}` };
 };
 
-const exec = () => app(brainGcd, Greeting);
+const exec = () => app(brainGcd, gameDefinition);
 
 export default exec;

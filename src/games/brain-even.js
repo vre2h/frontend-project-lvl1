@@ -8,7 +8,7 @@ const Answers = {
 };
 
 // prettier-ignore
-const Greeting = 'Answer "yes" if the number is even, otherwise answer "no".';
+const gameDefinition = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 /**
  * @param {number} num - number that need to be checked
@@ -34,6 +34,6 @@ const brainEven = () => {
   return { expected: actualParity, question: randomNumber };
 };
 
-const exec = () => app(brainEven, Greeting);
+const exec = () => app(brainEven, gameDefinition);
 
 export default exec;

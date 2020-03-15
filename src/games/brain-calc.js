@@ -3,7 +3,7 @@ import app from '../index.js';
 
 const Operations = ['+', '-', '%', '*'];
 
-const Greeting = 'What is the result of the expression?';
+const gameDefinition = 'What is the result of the expression?';
 
 /**
  *
@@ -54,6 +54,6 @@ const brainCalc = () => {
   };
 };
 
-const exec = () => app(brainCalc, Greeting);
+const exec = () => app(brainCalc, gameDefinition);
 
 export default exec;

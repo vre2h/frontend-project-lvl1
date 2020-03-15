@@ -1,7 +1,7 @@
 import getRandomNumber from '../utils.js';
 import app from '../index.js';
 
-const Greeting = 'What number is missing in the progression?';
+const gameDefinition = 'What number is missing in the progression?';
 
 // prettier-ignore
 const getProgression = ({
@@ -49,6 +49,6 @@ const brainProgression = () => {
   return { expected: String(expected), question: progression };
 };
 
-const exec = () => app(brainProgression, Greeting);
+const exec = () => app(brainProgression, gameDefinition);
 
 export default exec;

@@ -9,7 +9,7 @@ const Answers = {
 };
 
 // prettier-ignore
-const Greeting = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const gameDefinition = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 /**
  * Check if the number is prime
@@ -44,6 +44,6 @@ const brainPrime = () => {
   return { expected: actualParity, question: randomNumber };
 };
 
-const exec = () => app(brainPrime, Greeting);
+const exec = () => app(brainPrime, gameDefinition);
 
 export default exec;

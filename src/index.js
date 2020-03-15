@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 
 const WinningScore = 3;
 
-const app = (game, Greeting) => {
+const app = (game, gameDefinition) => {
   if (!game) {
     throw new Error('Please provide a game!');
   }
@@ -13,7 +13,7 @@ const app = (game, Greeting) => {
 
   console.log(`Hello, ${name}!\n`);
 
-  console.log(`${Greeting}\n`);
+  console.log(`${gameDefinition}\n`);
 
   let score = 0;
 
