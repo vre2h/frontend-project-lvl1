@@ -1,7 +1,8 @@
 /**
  * returns random elem between min and max
- * @param {number} min
- * @param {number} max
+ * @param {object} range
+ * @param {number} range.min
+ * @param {number} range.max
  */
 // prettier-ignore
 const getRandomNumber = ({ min = 0, max = 10 } = {}) => Math.floor(

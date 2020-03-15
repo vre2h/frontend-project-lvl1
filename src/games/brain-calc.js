@@ -30,17 +30,11 @@ const calcByOperation = (operand1, operand2, operator) => {
 };
 
 /**
- * @typedef {Object} BrainCalcResponse
- * @property {number} GameResponse.actual - actual answer
- * @property {number} GameResponse.expected - expected answer
- */
-
-/**
  * Checking whether the given number is Event
- * @returns {BrainCalcResponse}
+ * @returns {GameInterface}
  *
  */
-const brainCalc = () => {
+const getGameInterface = () => {
   const randomNumber1 = getRandomNumber({ max: 100 });
   const randomNumber2 = getRandomNumber({ max: 100 });
   const randomOperator = Operations[getRandomNumber({ max: Operations.length })]; // prettier-ignore
@@ -54,6 +48,6 @@ const brainCalc = () => {
   };
 };
 
-const exec = () => app(brainCalc, gameDefinition);
+const exec = () => app(getGameInterface, gameDefinition);
 
 export default exec;

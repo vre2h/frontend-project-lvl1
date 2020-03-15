@@ -26,23 +26,17 @@ const isPrime = (num) => {
 };
 
 /**
- * @typedef {Object} BrainPrimeResponse
- * @property {string} GameResponse.actual - actual answer
- * @property {string} GameResponse.expected - expected answer
- */
-
-/**
  * Checking whether the given number is Event
- * @returns {BrainPrimeResponse}
+ * @returns {GameInterface}
  *
  */
-const brainPrime = () => {
+const getGameInterface = () => {
   const randomNumber = getRandomNumber({ min: -100, max: 100 });
   const answer = isPrime(randomNumber) ? 'yes' : 'no';
 
   return { answer, question: randomNumber };
 };
 
-const exec = () => app(brainPrime, gameDefinition);
+const exec = () => app(getGameInterface, gameDefinition);
 
 export default exec;

@@ -23,17 +23,11 @@ const getProgression = ({
 };
 
 /**
- * @typedef {Object} BrainProgressionResponse
- * @property {string} GameResponse.actual - actual answer
- * @property {string} GameResponse.answer - expected answer
- */
-
-/**
  * Checking whether the answer is gcd of the two numbers
- * @returns {BrainProgressionResponse}
+ * @returns {GameInterface}
  *
  */
-const brainProgression = () => {
+const getGameInterface = () => {
   const startNumber = getRandomNumber({ max: 100 });
   const diff = getRandomNumber({ min: 1, max: 10 });
   const size = getRandomNumber({ min: 8, max: 10 });
@@ -49,6 +43,6 @@ const brainProgression = () => {
   return { answer: String(answer), question: progression };
 };
 
-const exec = () => app(brainProgression, gameDefinition);
+const exec = () => app(getGameInterface, gameDefinition);
 
 export default exec;

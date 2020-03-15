@@ -12,23 +12,17 @@ const gameDefinition = 'Answer "yes" if the number is even, otherwise answer "no
 const isEven = (num) => num % 2 === 0;
 
 /**
- * @typedef {Object} BrainEvenResponse
- * @property {string} GameResponse.actual - actual answer
- * @property {string} GameResponse.expected - expected answer
- */
-
-/**
  * Checking whether the given number is Event
- * @returns {BrainEvenResponse}
+ * @returns {GameInterface}
  *
  */
-const brainEven = () => {
+const getGameInterface = () => {
   const randomNumber = getRandomNumber({ max: 100 });
   const answer = isEven(randomNumber) ? 'yes' : 'no';
 
   return { answer, question: randomNumber };
 };
 
-const exec = () => app(brainEven, gameDefinition);
+const exec = () => app(getGameInterface, gameDefinition);
 
 export default exec;

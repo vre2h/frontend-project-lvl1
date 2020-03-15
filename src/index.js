@@ -2,6 +2,17 @@ import readlineSync from 'readline-sync';
 
 const WinningScore = 3;
 
+/**
+ * @typedef {Object} GameInterface
+ * @property {string} GameResponse.answer - actual answer
+ * @property {string} GameResponse.question - expected answer
+ */
+
+/**
+ * Engine for running game
+ * @param {function} game which @returns {GameInterface}
+ * @param {string} gameDefinition
+ */
 const app = (game, gameDefinition) => {
   if (!game) {
     throw new Error('Please provide a game!');
