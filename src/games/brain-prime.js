@@ -12,6 +12,10 @@ const gameDefinition = 'Answer "yes" if given number is prime. Otherwise answer 
  * @returns {boolean} whether given number prime or not
  */
 const isPrime = (num) => {
+  if (num < 2) {
+    return false;
+  }
+
   for (let i = 2; i <= num / 2; i += 1) {
     if (num % i === 0) {
       return false;
@@ -33,7 +37,7 @@ const isPrime = (num) => {
  *
  */
 const brainPrime = () => {
-  const randomNumber = getRandomNumber({ max: 100 });
+  const randomNumber = getRandomNumber({ min: -100, max: 100 });
   const answer = isPrime(randomNumber) ? 'yes' : 'no';
 
   return { answer, question: randomNumber };
