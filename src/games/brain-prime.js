@@ -3,11 +3,6 @@
 import getRandomNumber from '../utils.js';
 import app from '../index.js';
 
-const Answers = {
-  yes: 'yes',
-  no: 'no',
-};
-
 // prettier-ignore
 const gameDefinition = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -39,7 +34,7 @@ const isPrime = (num) => {
  */
 const brainPrime = () => {
   const randomNumber = getRandomNumber({ max: 100 });
-  const actualParity = isPrime(randomNumber) ? Answers.yes : Answers.no;
+  const actualParity = isPrime(randomNumber) ? 'yes' : 'no';
 
   return { expected: actualParity, question: randomNumber };
 };

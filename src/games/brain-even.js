@@ -2,11 +2,6 @@ import getRandomNumber from '../utils.js';
 
 import app from '../index.js';
 
-const Answers = {
-  yes: 'yes',
-  no: 'no',
-};
-
 // prettier-ignore
 const gameDefinition = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -29,7 +24,7 @@ const isEven = (num) => num % 2 === 0;
  */
 const brainEven = () => {
   const randomNumber = getRandomNumber({ max: 100 });
-  const actualParity = isEven(randomNumber) ? Answers.yes : Answers.no;
+  const actualParity = isEven(randomNumber) ? 'yes' : 'no';
 
   return { expected: actualParity, question: randomNumber };
 };
