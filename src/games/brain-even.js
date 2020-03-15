@@ -24,9 +24,9 @@ const isEven = (num) => num % 2 === 0;
  */
 const brainEven = () => {
   const randomNumber = getRandomNumber({ max: 100 });
-  const actualParity = isEven(randomNumber) ? 'yes' : 'no';
+  const answer = isEven(randomNumber) ? 'yes' : 'no';
 
-  return { expected: actualParity, question: randomNumber };
+  return { answer, question: randomNumber };
 };
 
 const exec = () => app(brainEven, gameDefinition);

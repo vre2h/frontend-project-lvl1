@@ -18,16 +18,16 @@ const app = (game, gameDefinition) => {
   let score = 0;
 
   while (score !== WinningScore) {
-    const { question, expected } = game();
+    const { question, answer } = game();
 
     const actual = readlineSync.question(`Question: ${question} \n`);
 
-    if (expected === actual) {
+    if (answer === actual) {
       score += 1;
       console.log('Correct!');
     } else {
       console.log(`
-"${actual}" is wrong answer ;(. Correct answer was "${expected}".
+"${actual}" is wrong answer ;(. Correct answer was "${answer}".
 Let's try again, ${name}!
       `);
       break;

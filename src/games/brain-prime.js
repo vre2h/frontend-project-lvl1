@@ -34,9 +34,9 @@ const isPrime = (num) => {
  */
 const brainPrime = () => {
   const randomNumber = getRandomNumber({ max: 100 });
-  const actualParity = isPrime(randomNumber) ? 'yes' : 'no';
+  const answer = isPrime(randomNumber) ? 'yes' : 'no';
 
-  return { expected: actualParity, question: randomNumber };
+  return { answer, question: randomNumber };
 };
 
 const exec = () => app(brainPrime, gameDefinition);

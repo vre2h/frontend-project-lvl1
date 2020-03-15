@@ -35,9 +35,9 @@ const gcd = (num1, num2) => {
 const brainGcd = () => {
   const randomNumber1 = getRandomNumber({ max: 100 });
   const randomNumber2 = getRandomNumber({ max: 100 });
-  const expected = String(gcd(randomNumber1, randomNumber2));
+  const answer = String(gcd(randomNumber1, randomNumber2));
 
-  return { expected, question: `${randomNumber1} ${randomNumber2}` };
+  return { answer, question: `${randomNumber1} ${randomNumber2}` };
 };
 
 const exec = () => app(brainGcd, gameDefinition);

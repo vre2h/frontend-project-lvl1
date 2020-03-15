@@ -44,12 +44,12 @@ const brainCalc = () => {
   const randomNumber1 = getRandomNumber({ max: 100 });
   const randomNumber2 = getRandomNumber({ max: 100 });
   const randomOperator = Operations[getRandomNumber({ max: Operations.length })]; // prettier-ignore
-  const expected = String(
+  const answer = String(
     calcByOperation(randomNumber1, randomNumber2, randomOperator),
   );
 
   return {
-    expected,
+    answer,
     question: ` ${randomNumber1} ${randomOperator} ${randomNumber2}`,
   };
 };
