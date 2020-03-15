@@ -1,4 +1,4 @@
-import { getRandomBefore, getRandomSegment } from '../utils.js';
+import getRandomNumber from '../utils.js';
 import app from '../index.js';
 
 const Greeting = 'What number is missing in the progression?';
@@ -34,10 +34,10 @@ const getProgression = ({
  *
  */
 const brainProgression = () => {
-  const startNumber = getRandomBefore(100);
-  const diff = getRandomSegment(1, 10);
-  const size = getRandomSegment(8, 10);
-  const numberOfSkippedElem = getRandomBefore(size);
+  const startNumber = getRandomNumber({ max: 100 });
+  const diff = getRandomNumber({ min: 1, max: 10 });
+  const size = getRandomNumber({ min: 8, max: 10 });
+  const numberOfSkippedElem = getRandomNumber({ max: size });
 
   const { expected, progression } = getProgression({
     startNumber,
@@ -51,4 +51,4 @@ const brainProgression = () => {
 
 const exec = () => app(brainProgression, Greeting);
 
-export { brainProgression as default, exec };
+export default exec;

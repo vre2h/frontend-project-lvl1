@@ -1,7 +1,7 @@
-import { getRandomBefore } from '../utils.js';
+import getRandomNumber from '../utils.js';
 import app from '../index.js';
 
-const Operations = ['+', '-', '/', '*'];
+const Operations = ['+', '-', '%', '*'];
 
 const Greeting = 'What is the result of the expression?';
 
@@ -9,17 +9,17 @@ const Greeting = 'What is the result of the expression?';
  *
  * @param {number} operand1
  * @param {number} operand2
- * @param {string} operation
+ * @param {string} operator
  * @returns {number} given operation calculated by the operands
  */
-const calcByOperation = (operand1, operand2, operation) => {
-  switch (operation) {
+const calcByOperation = (operand1, operand2, operator) => {
+  switch (operator) {
     case '+':
       return operand1 + operand2;
     case '-':
       return operand1 - operand2;
-    case '/':
-      return operand1 / operand2;
+    case '%':
+      return operand1 % operand2;
     case '*':
       return operand1 * operand2;
     default:
@@ -41,19 +41,19 @@ const calcByOperation = (operand1, operand2, operation) => {
  *
  */
 const brainCalc = () => {
-  const randomNumber1 = getRandomBefore(100);
-  const randomNumber2 = getRandomBefore(100);
-  const randomOperation = Operations[getRandomBefore(Operations.length)];
+  const randomNumber1 = getRandomNumber({ max: 100 });
+  const randomNumber2 = getRandomNumber({ max: 100 });
+  const randomOperator = Operations[getRandomNumber({ max: Operations.length })]; // prettier-ignore
   const expected = String(
-    calcByOperation(randomNumber1, randomNumber2, randomOperation),
+    calcByOperation(randomNumber1, randomNumber2, randomOperator),
   );
 
   return {
     expected,
-    question: ` ${randomNumber1} ${randomOperation} ${randomNumber2}`,
+    question: ` ${randomNumber1} ${randomOperator} ${randomNumber2}`,
   };
 };
 
 const exec = () => app(brainCalc, Greeting);
 
-export { brainCalc as default, exec };
+export default exec;
