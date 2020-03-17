@@ -30,7 +30,7 @@ const gcd = (num1, num2) => {
  * @returns {GameInterface}
  *
  */
-const getGameInterface = () => {
+const getGameData = () => {
   const randomNumber1 = getRandomNumber({ max: 100 });
   const randomNumber2 = getRandomNumber({ max: 100 });
   const answer = String(gcd(randomNumber1, randomNumber2));
@@ -38,6 +38,6 @@ const getGameInterface = () => {
   return { answer, question: `${randomNumber1} ${randomNumber2}` };
 };
 
-const exec = () => app(getGameInterface, gameDefinition);
+const exec = () => app(getGameData, gameDefinition);
 
 export default exec;

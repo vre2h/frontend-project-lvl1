@@ -30,13 +30,13 @@ const isPrime = (num) => {
  * @returns {GameInterface}
  *
  */
-const getGameInterface = () => {
+const getGameData = () => {
   const randomNumber = getRandomNumber({ min: -100, max: 100 });
   const answer = isPrime(randomNumber) ? 'yes' : 'no';
 
   return { answer, question: randomNumber };
 };
 
-const exec = () => app(getGameInterface, gameDefinition);
+const exec = () => app(getGameData, gameDefinition);
 
 export default exec;

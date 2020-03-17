@@ -27,7 +27,7 @@ const getProgression = ({
  * @returns {GameInterface}
  *
  */
-const getGameInterface = () => {
+const getGameData = () => {
   const startNumber = getRandomNumber({ max: 100 });
   const diff = getRandomNumber({ min: 1, max: 10 });
   const size = getRandomNumber({ min: 8, max: 10 });
@@ -43,6 +43,6 @@ const getGameInterface = () => {
   return { answer: String(answer), question: progression };
 };
 
-const exec = () => app(getGameInterface, gameDefinition);
+const exec = () => app(getGameData, gameDefinition);
 
 export default exec;

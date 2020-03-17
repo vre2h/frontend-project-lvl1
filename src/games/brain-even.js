@@ -16,13 +16,13 @@ const isEven = (num) => num % 2 === 0;
  * @returns {GameInterface}
  *
  */
-const getGameInterface = () => {
+const getGameData = () => {
   const randomNumber = getRandomNumber({ max: 100 });
   const answer = isEven(randomNumber) ? 'yes' : 'no';
 
   return { answer, question: randomNumber };
 };
 
-const exec = () => app(getGameInterface, gameDefinition);
+const exec = () => app(getGameData, gameDefinition);
 
 export default exec;

@@ -34,7 +34,7 @@ const calcByOperation = (operand1, operand2, operator) => {
  * @returns {GameInterface}
  *
  */
-const getGameInterface = () => {
+const getGameData = () => {
   const randomNumber1 = getRandomNumber({ max: 100 });
   const randomNumber2 = getRandomNumber({ max: 100 });
   const randomOperator = operations[getRandomNumber({ max: operations.length })]; // prettier-ignore
@@ -48,6 +48,6 @@ const getGameInterface = () => {
   };
 };
 
-const exec = () => app(getGameInterface, gameDefinition);
+const exec = () => app(getGameData, gameDefinition);
 
 export default exec;
