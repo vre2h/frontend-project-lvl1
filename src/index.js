@@ -32,9 +32,7 @@ const app = (game, gameDefinition) => {
     const userAnswer = readlineSync.question(`Question: ${question} \n`);
 
     if (answer !== userAnswer) {
-      console.log(`
-      "${userAnswer}" is wrong answer ;(. Correct answer was "${answer}".
-            `);
+      console.log(`\n"${userAnswer}" is wrong answer ;(. Correct answer was "${answer}".`); // prettier-ignore
       console.log(`Let's try again, ${name}!`);
       return;
     }

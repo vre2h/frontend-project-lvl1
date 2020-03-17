@@ -31,11 +31,11 @@ const gcd = (num1, num2) => {
  *
  */
 const getGameData = () => {
-  const randomNumber1 = getRandomNumber({ max: 100 });
-  const randomNumber2 = getRandomNumber({ max: 100 });
-  const answer = String(gcd(randomNumber1, randomNumber2));
+  const number1 = getRandomNumber({ max: 100 });
+  const number2 = getRandomNumber({ max: 100 });
+  const answer = String(gcd(number1, number2));
 
-  return { answer, question: `${randomNumber1} ${randomNumber2}` };
+  return { answer, question: `${number1} ${number2}` };
 };
 
 const exec = () => app(getGameData, gameDefinition);

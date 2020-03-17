@@ -17,10 +17,10 @@ const isEven = (num) => num % 2 === 0;
  *
  */
 const getGameData = () => {
-  const randomNumber = getRandomNumber({ max: 100 });
-  const answer = isEven(randomNumber) ? 'yes' : 'no';
+  const number = getRandomNumber({ max: 100 });
+  const answer = isEven(number) ? 'yes' : 'no';
 
-  return { answer, question: randomNumber };
+  return { answer, question: number };
 };
 
 const exec = () => app(getGameData, gameDefinition);

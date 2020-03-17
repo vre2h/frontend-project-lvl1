@@ -31,10 +31,10 @@ const isPrime = (num) => {
  *
  */
 const getGameData = () => {
-  const randomNumber = getRandomNumber({ min: -100, max: 100 });
-  const answer = isPrime(randomNumber) ? 'yes' : 'no';
+  const number = getRandomNumber({ min: -100, max: 100 });
+  const answer = isPrime(number) ? 'yes' : 'no';
 
-  return { answer, question: randomNumber };
+  return { answer, question: number };
 };
 
 const exec = () => app(getGameData, gameDefinition);
