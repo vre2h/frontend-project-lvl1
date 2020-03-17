@@ -25,10 +25,10 @@ const getProgression = (startNumber, diff, size) => {
  * @returns {GameInterface}
  */
 const getGameData = () => {
-  const startNumber = getRandomNumber({ max: 100 });
-  const diff = getRandomNumber({ min: 1, max: 10 });
-  const size = getRandomNumber({ min: 8, max: 10 });
-  const idxOfSkippedElem = getRandomNumber({ max: size });
+  const startNumber = getRandomNumber(0, 100);
+  const diff = getRandomNumber(1, 10);
+  const size = getRandomNumber(8, 10);
+  const idxOfSkippedElem = getRandomNumber(0, size);
   const progression = getProgression(startNumber, diff, size);
 
   const skipElemByIdx = (el, idx) => (idx === idxOfSkippedElem ? '..' : el);

@@ -35,12 +35,10 @@ const calcByOperation = (operand1, operand2, operator) => {
  *
  */
 const getGameData = () => {
-  const number1 = getRandomNumber({ max: 100 });
-  const number2 = getRandomNumber({ max: 100 });
-  const operator = operations[getRandomNumber({ max: operations.length })]; // prettier-ignore
-  const answer = String(
-    calcByOperation(number1, number2, operator),
-  );
+  const number1 = getRandomNumber(0, 100);
+  const number2 = getRandomNumber(0, 100);
+  const operator = operations[getRandomNumber(0, operations.length)];
+  const answer = String(calcByOperation(number1, number2, operator));
 
   return {
     answer,
