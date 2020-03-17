@@ -1,7 +1,7 @@
 import getRandomNumber from '../utils.js';
 import app from '../index.js';
 
-const operations = ['+', '-', '%', '*'];
+const operators = ['+', '-', '%', '*'];
 
 const gameDefinition = 'What is the result of the expression?';
 
@@ -37,7 +37,7 @@ const calcByOperation = (operand1, operand2, operator) => {
 const getGameData = () => {
   const number1 = getRandomNumber(0, 100);
   const number2 = getRandomNumber(0, 100);
-  const operator = operations[getRandomNumber(0, operations.length)];
+  const operator = operators[getRandomNumber(0, operators.length - 1)];
   const answer = String(calcByOperation(number1, number2, operator));
 
   return {
