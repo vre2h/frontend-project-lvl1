@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const WinningScore = 3;
+const winningScore = 3;
 
 /**
  * @typedef {Object} GameInterface
@@ -26,28 +26,23 @@ const app = (game, gameDefinition) => {
 
   console.log(`${gameDefinition}\n`);
 
-  let score = 0;
-
-  while (score !== WinningScore) {
+  for (let i = 0; i < winningScore; i += 1) {
     const { question, answer } = game();
 
-    const actual = readlineSync.question(`Question: ${question} \n`);
+    const userAnswer = readlineSync.question(`Question: ${question} \n`);
 
-    if (answer === actual) {
-      score += 1;
-      console.log('Correct!');
-    } else {
+    if (answer !== userAnswer) {
       console.log(`
-"${actual}" is wrong answer ;(. Correct answer was "${answer}".
-Let's try again, ${name}!
-      `);
-      break;
+      "${userAnswer}" is wrong answer ;(. Correct answer was "${answer}".
+            `);
+      console.log(`Let's try again, ${name}!`);
+      return;
     }
 
-    if (score === WinningScore) {
-      console.log(`\nCongratulations, ${name}!`);
-    }
+    console.log('Correct!');
   }
+
+  console.log(`\nCongratulations, ${name}!`);
 };
 
 export default app;
