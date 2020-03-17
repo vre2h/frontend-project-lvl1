@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import app from '../src/index.js';
+import exec from '../src/games/brain-games.js';
 
-app();
+exec();
