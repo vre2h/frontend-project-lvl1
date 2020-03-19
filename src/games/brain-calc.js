@@ -1,5 +1,5 @@
 import getRandomNumber from '../utils.js';
-import app from '../index.js';
+import runEngine from '../index.js';
 
 const operators = ['+', '-', '%', '*'];
 
@@ -46,6 +46,6 @@ const getGameData = () => {
   };
 };
 
-const exec = () => app(getGameData, gameDefinition);
+const exec = () => runEngine(getGameData, gameDefinition);
 
 export default exec;

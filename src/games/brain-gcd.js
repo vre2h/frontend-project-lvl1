@@ -1,5 +1,5 @@
 import getRandomNumber from '../utils.js';
-import app from '../index.js';
+import runEngine from '../index.js';
 
 const gameDefinition = 'Find the greatest common divisor of given numbers.';
 
@@ -38,6 +38,6 @@ const getGameData = () => {
   return { answer, question: `${number1} ${number2}` };
 };
 
-const exec = () => app(getGameData, gameDefinition);
+const exec = () => runEngine(getGameData, gameDefinition);
 
 export default exec;

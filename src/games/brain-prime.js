@@ -1,7 +1,7 @@
 // import readlineSync from 'readline-sync';
 
 import getRandomNumber from '../utils.js';
-import app from '../index.js';
+import runEngine from '../index.js';
 
 // prettier-ignore
 const gameDefinition = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -37,6 +37,6 @@ const getGameData = () => {
   return { answer, question: String(number) };
 };
 
-const exec = () => app(getGameData, gameDefinition);
+const exec = () => runEngine(getGameData, gameDefinition);
 
 export default exec;
