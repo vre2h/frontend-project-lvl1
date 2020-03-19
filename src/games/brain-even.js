@@ -20,7 +20,7 @@ const getGameData = () => {
   const number = getRandomNumber(0, 100);
   const answer = isEven(number) ? 'yes' : 'no';
 
-  return { answer, question: number };
+  return { answer, question: String(number) };
 };
 
 const exec = () => app(getGameData, gameDefinition);
