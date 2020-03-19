@@ -27,7 +27,7 @@ const gcd = (num1, num2) => {
 
 /**
  * Checking whether the answer is gcd of the two numbers
- * @returns {GameInterface}
+ * @returns {GameData}
  *
  */
 const getGameData = () => {

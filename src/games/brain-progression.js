@@ -13,11 +13,7 @@ const gameDefinition = 'What number is missing in the progression?';
 const getProgression = (firstElem, diff, progressionLength) => {
   const progression = [];
 
-  for (
-    let num = firstElem, i = 0;
-    i < progressionLength;
-    num += diff, i += 1
-  ) {
+  for (let num = firstElem, i = 0; i < progressionLength; num += diff, i += 1) {
     progression.push(num);
   }
 
@@ -26,7 +22,7 @@ const getProgression = (firstElem, diff, progressionLength) => {
 
 /**
  * Checking whether the answer is gcd of the two numbers
- * @returns {GameInterface}
+ * @returns {GameData}
  */
 const getGameData = () => {
   const firstElem = getRandomNumber(0, 100);

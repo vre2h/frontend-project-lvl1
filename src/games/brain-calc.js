@@ -31,7 +31,7 @@ const calcByOperation = (operand1, operand2, operator) => {
 
 /**
  * Checking whether the given number is Event
- * @returns {GameInterface}
+ * @returns {GameData}
  *
  */
 const getGameData = () => {

@@ -3,14 +3,14 @@ import readlineSync from 'readline-sync';
 const winningScore = 3;
 
 /**
- * @typedef {Object} GameInterface
- * @property {string} GameResponse.answer - actual answer
- * @property {string} GameResponse.question - expected answer
+ * @typedef {Object} GameData
+ * @property {string} GameData.answer - actual answer
+ * @property {string} GameData.question - expected answer
  */
 
 /**
  * Engine for running game
- * @param {function} game which @returns {GameInterface}
+ * @param {function} game which @returns {GameData}
  * @param {string} gameDefinition
  */
 export default (exec, gameDefinition) => {

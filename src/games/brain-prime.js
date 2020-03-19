@@ -27,7 +27,7 @@ const isPrime = (num) => {
 
 /**
  * Checking whether the given number is Event
- * @returns {GameInterface}
+ * @returns {GameData}
  *
  */
 const getGameData = () => {

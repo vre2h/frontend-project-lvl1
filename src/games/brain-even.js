@@ -13,7 +13,7 @@ const isEven = (num) => num % 2 === 0;
 
 /**
  * Checking whether the given number is Event
- * @returns {GameInterface}
+ * @returns {GameData}
  *
  */
 const getGameData = () => {
