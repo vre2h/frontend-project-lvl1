@@ -5,15 +5,19 @@ const gameDefinition = 'What number is missing in the progression?';
 
 /**
  * Returns progression
- * @param {number} startNumber
+ * @param {number} firstElem
  * @param {number} diff
- * @param {number} size
+ * @param {number} progressionLength
  * @returns {[number]}
  */
-const getProgression = (startNumber, diff, size) => {
+const getProgression = (firstElem, diff, progressionLength) => {
   const progression = [];
 
-  for (let num = startNumber, i = 0; i < size; num += diff, i += 1) {
+  for (
+    let num = firstElem, i = 0;
+    i < progressionLength;
+    num += diff, i += 1
+  ) {
     progression.push(num);
   }
 
@@ -25,16 +29,15 @@ const getProgression = (startNumber, diff, size) => {
  * @returns {GameInterface}
  */
 const getGameData = () => {
-  const startNumber = getRandomNumber(0, 100);
+  const firstElem = getRandomNumber(0, 100);
   const diff = getRandomNumber(1, 10);
-  const size = getRandomNumber(8, 10);
-  const idxOfSkippedElem = getRandomNumber(0, size);
-  const progression = getProgression(startNumber, diff, size);
+  const progressionLength = getRandomNumber(8, 10);
+  const indexSkippedElement = getRandomNumber(0, progressionLength - 1);
+  const progression = getProgression(firstElem, diff, progressionLength);
 
-  const skipElemByIdx = (el, idx) => (idx === idxOfSkippedElem ? '..' : el);
-
-  const answer = String(progression[idxOfSkippedElem]);
-  const question = progression.map(skipElemByIdx).join(' ');
+  const answer = String(progression[indexSkippedElement]);
+  progression[indexSkippedElement] = '..';
+  const question = progression.join(' ');
 
   return { answer, question };
 };
