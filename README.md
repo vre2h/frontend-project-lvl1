@@ -21,7 +21,7 @@ How to install and play the game:
 
 [![asciicast](https://asciinema.org/a/NqJ4fKek8XZM1ObJaEKaDYckj.svg)](https://asciinema.org/a/NqJ4fKek8XZM1ObJaEKaDYckj)
 
-## Game 2: Brain gcd
+## Game 3: Brain gcd
 
 _Find greatest common divisor._
 
@@ -29,7 +29,7 @@ How to install and play the game:
 
 [![asciicast](https://asciinema.org/a/fAqh8j0WdsuCEqqi6KQA2ppLY.svg)](https://asciinema.org/a/fAqh8j0WdsuCEqqi6KQA2ppLY)
 
-## Game 3: Brain progression
+## Game 4: Brain progression
 
 _Find skipped elem in progression._
 
@@ -37,7 +37,7 @@ How to install and play the game:
 
 [![asciicast](https://asciinema.org/a/MfwXrh3rz4asMaMcYD90rScTd.svg)](https://asciinema.org/a/MfwXrh3rz4asMaMcYD90rScTd)
 
-## Game 4: Brain prime
+## Game 5: Brain prime
 
 _Guess if the number is prime._
 
