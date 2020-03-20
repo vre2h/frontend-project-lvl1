@@ -13,8 +13,8 @@ const winningScore = 3;
  * @param {function} game which @returns {GameData}
  * @param {string} gameDefinition
  */
-export default (exec, gameDefinition) => {
-  if (!exec) {
+export default (getGameData, gameDefinition) => {
+  if (!getGameData) {
     throw new Error('Please provide a game!');
   }
 
@@ -27,7 +27,7 @@ export default (exec, gameDefinition) => {
   console.log(`${gameDefinition}\n`);
 
   for (let i = 0; i < winningScore; i += 1) {
-    const { question, answer } = exec();
+    const { question, answer } = getGameData();
 
     const userAnswer = readlineSync.question(`Question: ${question} \n`);
 
