@@ -10,19 +10,11 @@ const gameDefinition = 'Find the greatest common divisor of given numbers.';
  * @returns {number} gcd of two numbers
  */
 const gcd = (num1, num2) => {
-  if (num1 === 0 || num2 === 0) {
-    return num1 || num2;
-  }
-
-  if (num1 === num2) {
+  if (num2 === 0) {
     return num1;
   }
 
-  if (num1 > num2) {
-    return gcd(num1 - num2, num2);
-  }
-
-  return gcd(num1, num2 - num1);
+  return gcd(num2, num1 % num2);
 };
 
 /**
